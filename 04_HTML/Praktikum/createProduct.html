@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <p>Product name :</p>
+    <input type="text" name="nama" required pattern=".{6,50}" title="Nama Produk harus memiliki 6 sampai 50 huruf">
+    <p>Product Category :</p>
+    <select name="Category" id="" required>
+        <option value="0" disabled selected>Select a category</option>
+        <option value="1">Cangkir Kopi</option>
+    </select>
+    <p>Product Freshness:</p>
+    <label for="new1"><input type="radio" name="new" value="Brand New" required>Brand New</label>
+    <label for="new2"><input type="radio" name="new" value="Second Hand">Second Hand</label>
+    <label for="new3"><input type="radio" name="new" value="Refurbished">Refurbished</label>
+    <p>Image of Product:</p>
+    <input type="file" name="gambar" required>
+    <p>Additional Description:</p>
+    <textarea name="desc" required></textarea>
+    <p>Product Price:</p>
+    <input type="number" required min="0">
+    <br><br>
+    <button type="submit">Submit</button>
+</body>
+</html>
