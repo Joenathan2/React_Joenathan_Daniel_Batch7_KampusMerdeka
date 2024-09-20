@@ -1,0 +1,229 @@
+body {
+    font-family: jost;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #203b74;
+    color: white;
+    padding: 50px;
+    min-height: 400px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero img {
+    max-width: 100%;
+    /* Mengatur gambar agar tidak terlalu besar */
+    height: auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px 20px 20px 30px;
+    width: 500px;
+    outline: none;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border: 2px solid #47B2E4;
+    background-color: #47B2E4;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-left: -35px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+.newsletter {
+    background-color: #F3F5FA;
+    padding: 30px;
+    text-align: center;
+    color: #37517E;
+}
+
+footer {
+    background-color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left h3 {
+    color: #37517E;
+}
+
+.footer-center h3 {
+    color: #37517E;
+}
+
+.footer-right1 h3 {
+    color: #37517E;
+}
+
+.footer-right2 h3 {
+    color: #37517E;
+}
+
+.footer-left p {
+    color: #5E5E5E;
+}
+
+.footer-center p {
+    color: #5E5E5E;
+}
+
+.footer-right1 p {
+    color: #5E5E5E;
+}
+
+.footer-right2 p {
+    color: #5E5E5E;
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: #5E5E5E;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.btn-transparent {
+    padding: 20px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-color: transparent;
+}
+
+.btn-transparent1 {
+    padding: 20px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #47B2E4;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-color: transparent;
+}
+
+.btn-transparent:hover {
+    background-color: white;
+    /* Saat hover, latar belakang menjadi putih */
+    color: #203b74;
+    /* Teks berubah menjadi warna biru */
+}
+
+.btn-transparent1:hover {
+    background-color: white;
+    /* Saat hover, latar belakang menjadi putih */
+    color: #203b74;
+    /* Teks berubah menjadi warna biru */
+}
+
+.newsletter input[type="email"] {
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #003cff;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.right-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    transform: skewX(-15deg);
+}
+
+.right-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    transform: skewX(-15deg);
+    /* Sesuaikan sudut kemiringan */
+}
