@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-white shadow mb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="text-xl font-bold text-gray-900">Simple Header</div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md transition duration-300"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md transition duration-300"
+              >Features</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md transition duration-300"
+              >Pricing</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md transition duration-300"
+              >FAQs</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md transition duration-300"
+              >About</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Create Product</h2>
+        <p class="text-gray-700 mb-6 text-center">
+          Please fill out the form to create a new product. All fields are
+          required.
+        </p>
+
+        <form
+          id="productForm"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+          action="#"
+          method="POST"
+        >
+          <!-- Product Name -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="product_name"
+              >Product Name</label
+            >
+            <input
+              class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+              id="product_name"
+              type="text"
+              placeholder="Enter product name"
+              required
+            />
+            <p class="text-red-500 text-xs hidden" id="nameError">
+              Product Name is required.
+            </p>
+          </div>
+
+          <!-- Product Category -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="product_category"
+              >Product Category</label
+            >
+            <select
+              class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+              id="product_category"
+              required
+            >
+              <option value="">Choose...</option>
+              <option value="Category 1">Category 1</option>
+              <option value="Category 2">Category 2</option>
+              <option value="Category 3">Category 3</option>
+            </select>
+            <p class="text-red-500 text-xs hidden" id="categoryError">
+              Please select a category.
+            </p>
+          </div>
+
+          <!-- Product Image -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="product_image"
+              >Image of Product</label
+            >
+            <input
+              class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+              id="product_image"
+              type="file"
+              required
+            />
+            <p class="text-red-500 text-xs hidden" id="imageError">
+              Please upload an image.
+            </p>
+          </div>
+
+          <!-- Product Freshness -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2"
+              >Product Freshness</label
+            >
+            <div class="mt-2 flex space-x-4">
+              <div>
+                <input
+                  id="freshness_brand_new"
+                  type="radio"
+                  value="Brand New"
+                  name="product_freshness"
+                  class="w-4 h-4 text-blue-600 focus:ring-blue-500 transition duration-200"
+                  required
+                />
+                <label
+                  for="freshness_brand_new"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Brand New</label
+                >
+              </div>
+              <div>
+                <input
+                  id="freshness_second_hand"
+                  type="radio"
+                  value="Second Hand"
+                  name="product_freshness"
+                  class="w-4 h-4 text-blue-600 focus:ring-blue-500 transition duration-200"
+                  required
+                />
+                <label
+                  for="freshness_second_hand"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Second Hand</label
+                >
+              </div>
+              <div>
+                <input
+                  id="freshness_refurbished"
+                  type="radio"
+                  value="Refurbished"
+                  name="product_freshness"
+                  class="w-4 h-4 text-blue-600 focus:ring-blue-500 transition duration-200"
+                  required
+                />
+                <label
+                  for="freshness_refurbished"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Refurbished</label
+                >
+              </div>
+            </div>
+            <p class="text-red-500 text-xs hidden" id="freshnessError">
+              Please select a product freshness option.
+            </p>
+          </div>
+
+          <!-- Additional Description -->
+          <div class="md:col-span-2 mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="product_description"
+              >Additional Description</label
+            >
+            <textarea
+              class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+              id="product_description"
+              rows="4"
+              placeholder="Enter additional description"
+              required
+            ></textarea>
+            <p class="text-red-500 text-xs hidden" id="descriptionError">
+              Additional description is required.
+            </p>
+          </div>
+
+          <!-- Product Price -->
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="product_price"
+              >Product Price</label
+            >
+            <div class="flex items-center">
+              <span class="text-gray-700 font-medium">$</span>
+              <input
+                class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 ml-2 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+                id="product_price"
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Enter price"
+                required
+              />
+            </div>
+            <p class="text-red-500 text-xs hidden" id="priceError">
+              Product price is required.
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="md:col-span-2 flex items-center justify-center py-2">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-blue-300 transition duration-200"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
