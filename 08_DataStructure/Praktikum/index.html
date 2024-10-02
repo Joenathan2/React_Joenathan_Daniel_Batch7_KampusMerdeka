@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Produk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>List Produk</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Cari produk..." />
+      <button onclick="searchProducts()">Cari</button>
+    </div>
+    <form id="productForm">
+      <input type="text" id="newProductName" placeholder="Nama Produk" />
+      <input
+        type="text"
+        id="newProductCategory"
+        placeholder="Kategori Produk"
+      />
+      <button type="submit">Tambah Produk</button>
+      <button type="button" onclick="deleteLastProduct()">
+        Hapus Terakhir
+      </button>
+    </form>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Product Name</th>
+          <th>Product Category</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="scritp.js"></script>
+  </body>
+</html>
