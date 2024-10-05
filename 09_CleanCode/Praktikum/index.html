@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Produk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Daftar Produk</h1>
+
+    <div class="pencarian-container">
+      <input type="text" id="inputPencarian" placeholder="Cari produk..." />
+      <button type="button" onclick="cariProduk()">Cari</button>
+    </div>
+
+    <form id="formProduk">
+      <input
+        type="text"
+        id="namaProdukBaru"
+        placeholder="Nama Produk"
+        required
+      />
+      <input
+        type="text"
+        id="kategoriProdukBaru"
+        placeholder="Kategori Produk"
+        required
+      />
+      <button type="submit">Tambah Produk</button>
+      <button type="button" onclick="hapusProdukTerakhir()">
+        Hapus Produk Terakhir
+      </button>
+    </form>
+
+    <table id="tabelProduk">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Produk</th>
+          <th>Kategori Produk</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="scritp.js"></script>
+  </body>
+</html>
