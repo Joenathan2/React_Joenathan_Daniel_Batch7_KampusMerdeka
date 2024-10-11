@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="path/to/your/bundle.js"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-600 min-h-screen"
+  >
+    <div id="root">
+      <header class="text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+          <div>
+            <a href="index.html" class="text-2xl font-bold">Weid's Website</a>
+          </div>
+          <nav class="space-x-4">
+            <a href="home.html" class="hover:text-gray-400">Home</a>
+            <a href="aboutus/src/pages/about" class="hover:text-gray-400"
+              >About</a
+            >
+            <a href="contactus.html" class="hover:text-gray-400">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="min-h-screen flex items-center justify-center px-4">
+        <div
+          class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 w-full max-w-4xl"
+        >
+          <div class="text-white max-w-sm md:max-w-md">
+            <h2 class="text-3xl font-bold">Weid's Website</h2>
+            <p class="mt-4 text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fuga,
+              magni inventore temporibus velit ea fugiat vero nihil numquam
+              facilis ab, eveniet cum sint doloribus fugit deleniti illo quo
+              vel. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Iusto optio non unde magni quisquam laboriosam quam. Ea aut
+              perspiciatis error sit non ipsa omnis molestias dignissimos
+              dolores. Corporis, nemo aliquam!
+            </p>
+          </div>
+
+          <div
+            class="bg-white/30 backdrop-blur-lg p-8 rounded-lg shadow-lg flex-grow w-full max-w-md border border-white/20"
+          >
+            <h1 class="text-2xl font-bold mb-6 text-center text-white">
+              Contact Us
+            </h1>
+            <form id="contactForm" class="space-y-6">
+              <div>
+                <label
+                  for="username"
+                  class="block text-white text-sm font-semibold"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="w-full px-4 py-3 border border-gray-400 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-white text-sm font-semibold"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 border border-gray-400 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="pesan"
+                  class="block text-white text-sm font-semibold"
+                  >Pesan</label
+                >
+                <textarea
+                  id="pesan"
+                  name="pesan"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-400 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-blue-500 text-white py-3 rounded-md font-semibold text-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Submit
+                </button>
+              </div>
+
+              <div id="output" class="mt-6 hidden bg-white-700 p-4 rounded-md">
+                <h2 class="text-xl font-bold mb-4 text-white">
+                  Submitted Data:
+                </h2>
+                <p class="text-white">
+                  <strong>Username:</strong> <span id="outputUsername"></span>
+                </p>
+                <p class="text-white">
+                  <strong>Email:</strong> <span id="outputEmail"></span>
+                </p>
+                <p class="text-white">
+                  <strong>Message:</strong> <span id="outputPesan"></span>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
