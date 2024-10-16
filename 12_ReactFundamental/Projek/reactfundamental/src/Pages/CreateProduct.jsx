@@ -1,4 +1,3 @@
-// CreateProduct.js
 import React from "react";
 import Header from "./Components/Header";
 import Footer from "../Components/Footer";
@@ -24,7 +23,6 @@ function CreateProduct() {
             be triggered by attempting to submit the form without completing it.
           </p>
 
-          {/* Form Fields */}
           <div className="mb-4">
             <label
               className="block text-gray-800 text-sm font-bold mb-2"
@@ -57,8 +55,6 @@ function CreateProduct() {
               <option>Category 3</option>
             </select>
           </div>
-
-          {/* ... Other Form Fields ... */}
 
           <div className="flex items-center justify-center py-2">
             <button
