@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Create from "./Pages/CreateProduct";
 import ProductDetail from "./Components/ProductDetail";
 import LandingPage from "./Pages/LandingPage";
+
 const App = () => {
   const [productList, setProductList] = useState([
     {
