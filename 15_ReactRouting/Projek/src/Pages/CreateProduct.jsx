@@ -1,45 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProductManager = () => {
   const [productName, setProductName] = useState("");
   const [productCategory, setProductCategory] = useState("");
   const [productFreshness, setProductFreshness] = useState("brand_new");
   const [productPrice, setProductPrice] = useState("");
-  const [productList, setProductList] = useState([
-    {
-      id: "1",
-      name: "Product 1",
-      category: "Category 1",
-      freshness: "brand_new",
-      price: "100",
-    },
-    {
-      id: "2",
-      name: "Product 2",
-      category: "Category 2",
-      freshness: "second_hand",
-      price: "200",
-    },
-    {
-      id: "3",
-      name: "Product 3",
-      category: "Category 3",
-      freshness: "refurbished",
-      price: "150",
-    },
-  ]);
+  const [productList, setProductList] = useState([]);
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     const newProduct = {
-      id: Math.random().toString(16).slice(2),
+      id: Date.now().toString(), // Gunakan timestamp sebagai ID unik
       name: productName,
       category: productCategory,
       freshness: productFreshness,
       price: productPrice,
     };
-
-    setProductList((prevProductList) => [...prevProductList, newProduct]);
+    setProductList([...productList, newProduct]);
     clearForm();
   };
 
@@ -50,13 +28,9 @@ const ProductManager = () => {
     setProductPrice("");
   };
 
-  const handleDelete = (id) => {
-    const confirmDelete = window.confirm(
-      "Apakah kalian ingin menghapus produk ini?"
-    );
-    if (confirmDelete) {
-      setProductList(productList.filter((product) => product.id !== id));
-    }
+  const handleView = (product) => {
+    // Menggunakan navigate dengan state untuk mengirim data produk
+    navigate(`/product/${product.id}`, { state: { product } });
   };
 
   return (
@@ -204,19 +178,18 @@ const ProductManager = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center py-2">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleSubmit}
-          >
-            Create Product
-          </button>
-        </div>
+        <button
+          className="bg-blue-500 text-white p-2 rounded"
+          onClick={handleSubmit}
+        >
+          Submit Product
+        </button>
 
+        {/* Tabel Produk */}
         <h2 className="text-2xl font-bold mt-8 mb-4 text-center text-blue-600">
           Product List
         </h2>
-        <table className="min-w-full bg-white">
+        <table className="min-w-full bg-white border">
           <thead>
             <tr>
               <th className="py-2 border-b">No</th>
@@ -230,24 +203,17 @@ const ProductManager = () => {
           <tbody>
             {productList.map((product, index) => (
               <tr key={product.id}>
-                <td className="border-b py-2 text-center">
-                  <Link
-                    to={`/product/${product.id}`}
-                    className="text-blue-600 hover:underline"
-                  >
-                    {index + 1}
-                  </Link>
-                </td>
-                <td className="border-b py-2">{product.name}</td>
-                <td className="border-b py-2">{product.category}</td>
-                <td className="border-b py-2">{product.freshness}</td>
-                <td className="border-b py-2">${product.price}</td>
-                <td className="border-b py-2 text-center">
+                <td className="py-2 border-b text-center">{index + 1}</td>
+                <td className="py-2 border-b">{product.name}</td>
+                <td className="py-2 border-b">{product.category}</td>
+                <td className="py-2 border-b">{product.freshness}</td>
+                <td className="py-2 border-b">${product.price}</td>
+                <td className="py-2 border-b text-center">
                   <button
-                    onClick={() => handleDelete(product.id)}
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+                    className="bg-green-500 text-white p-2 rounded"
+                    onClick={() => handleView(product)}
                   >
-                    Delete
+                    View
                   </button>
                 </td>
               </tr>
