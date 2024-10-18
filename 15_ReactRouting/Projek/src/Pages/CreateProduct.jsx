@@ -11,7 +11,7 @@ const ProductManager = () => {
 
   const handleSubmit = () => {
     const newProduct = {
-      id: Date.now().toString(), // Gunakan timestamp sebagai ID unik
+      id: Date.now().toString(),
       name: productName,
       category: productCategory,
       freshness: productFreshness,
@@ -29,7 +29,6 @@ const ProductManager = () => {
   };
 
   const handleView = (product) => {
-    // Menggunakan navigate dengan state untuk mengirim data produk
     navigate(`/product/${product.id}`, { state: { product } });
   };
 
@@ -185,7 +184,6 @@ const ProductManager = () => {
           Submit Product
         </button>
 
-        {/* Tabel Produk */}
         <h2 className="text-2xl font-bold mt-8 mb-4 text-center text-blue-600">
           Product List
         </h2>
