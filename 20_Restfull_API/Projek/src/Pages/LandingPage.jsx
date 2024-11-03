@@ -6,8 +6,7 @@ const Navbar = () => {
     <div
       className="bg-cover bg-center w-full h-screen flex flex-col"
       style={{
-        backgroundImage:
-          "url('https://cdn.discordapp.com/attachments/976467324309733376/1293904160735105075/1297318.jpg?ex=6716e967&is=671597e7&hm=7bd3a8d2ac95168b7f9c4426e2f1a02c0d9223f053e15f0590d0b7e0aa83952d&')",
+        backgroundImage: "url('src/assets/image.png')",
       }}
     >
       <nav className="bg-white bg-opacity-70 shadow w-full">
