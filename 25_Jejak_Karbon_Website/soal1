@@ -1,0 +1,55 @@
+# Tantangan dalam Mengukur Jejak Karbon pada Website
+
+Mengukur jejak karbon pada sebuah website bukanlah tugas yang mudah. Berbagai faktor mempengaruhi bagaimana energi digunakan dan emisi yang dihasilkan, mulai dari server hingga perangkat pengguna. Berikut adalah beberapa tantangan utama dalam proses pengukuran jejak karbon untuk website.
+
+## 1. Sumber Emisi yang Beragam
+
+Jejak karbon sebuah website berasal dari berbagai sumber, seperti:
+
+- **Server** yang menyimpan dan mengelola data.
+- **Perangkat pengguna** (komputer, smartphone) yang digunakan untuk mengakses website.
+
+Setiap komponen ini memiliki kontribusi yang berbeda, dan melacak semuanya secara akurat bisa sangat sulit.
+
+## 2. Perbedaan Sumber Energi
+
+Pusat data yang menyimpan website menggunakan berbagai jenis energi:
+
+- Beberapa pusat data menggunakan energi terbarukan (misalnya, tenaga surya atau angin).
+- Lainnya masih bergantung pada bahan bakar fosil.
+
+Perbedaan sumber energi ini membuat perhitungan jejak karbon menjadi tidak seragam dan sulit untuk diukur secara konsisten.
+
+## 3. Kurangnya Alat dan Standar yang Jelas
+
+Saat ini, belum ada alat atau standar yang seragam untuk mengukur jejak karbon website. Tanpa panduan yang jelas, mengukur dampak lingkungan website menjadi tugas yang sangat sulit dan terkadang tidak dapat dilakukan dengan cara yang efektif.
+
+## 4. Fluktuasi Lalu Lintas Pengguna
+
+Jumlah pengunjung sebuah website bisa bervariasi setiap hari:
+
+- Kadang website dapat memiliki ribuan pengunjung dalam sehari.
+- Di lain waktu, pengunjung bisa sangat sedikit.
+
+Fluktuasi ini membuat perhitungan emisi CO2 menjadi tidak stabil dan sangat bergantung pada banyak faktor yang sulit diprediksi.
+
+## 5. Pengaruh Perangkat Pengguna
+
+Jejak karbon tidak hanya bergantung pada server, tetapi juga pada perangkat yang digunakan oleh pengunjung:
+
+- Komputer desktop, laptop, atau smartphone memiliki tingkat konsumsi energi yang berbeda-beda.
+- Mengukur konsumsi energi setiap perangkat ini dengan akurat sangat sulit dilakukan.
+
+## 6. Pengukuran Data yang Ditransfer
+
+Jumlah data yang dikirimkan antara server dan perangkat pengguna bisa sangat bervariasi, tergantung pada jenis konten di website:
+
+- Website yang menggunakan banyak gambar atau video akan memerlukan lebih banyak data.
+- Menghitung energi yang digunakan untuk mentransfer data ini adalah tantangan besar.
+
+## 7. Kompleksitas Infrastruktur Jaringan
+
+Jejak karbon website juga dipengaruhi oleh infrastruktur jaringan yang digunakan untuk mentransfer data, seperti:
+
+- **Kabel bawah laut** yang digunakan untuk mentransfer data antar benua.
+- **Satelit** yang mengirimkan data ke pengguna di lokasi terpencil.
